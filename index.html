@@ -1,0 +1,754 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hóa Đơn Chuyển Tiền</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="Content/css/common.css" rel="stylesheet" />
+    <link href="Content/css/grid.css" rel="stylesheet" />
+    <link href="Content/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="main">
+        <section class="grid">
+            <div class="row">
+                <aside class="col l-4 m-0 c-0">
+                    <div class="menu-left">
+                        <div class="menu-left-item">
+                            <h2 class="title">
+                                CÔNG TY TNHH DV VT TRƯỜNG THỌ <br />
+                                BƯU ĐIỆN - VIETTEL TRƯỜNG THỌ
+                            </h2>
+                            <div class="box-dropdown">
+                                <label class="lbl-dropdown" for="input-dropdown">Chọn Loại Hóa Đơn</label>
+                                <input type="checkbox" hidden id="input-dropdown" />
+                                <ul class="list-dropdown">
+                                    <li class="list-dropdown-item">
+                                        <a class="list-dropdown-item__link" href="#">
+                                            <label for="input-dropdown">Hóa Đơn Bán Hàng</label>
+                                        </a>
+                                    </li>
+                                    <li class="list-dropdown-item">
+                                        <a class="list-dropdown-item__link" href="#">
+                                            <label for="input-dropdown">Hóa Đơn Thu Hộ</label>
+                                        </a>
+                                    </li>
+                                    <li class="list-dropdown-item">
+                                        <a class="list-dropdown-item__link" href="#">
+                                            <label for="input-dropdown">Hóa Đơn Chuyển Tiền / Nộp Tiền</label>
+                                        </a>
+                                    </li>
+                                    <li class="list-dropdown-item">
+                                        <a class="list-dropdown-item__link" href="#">
+                                            <label for="input-dropdown">Hóa Đơn Nhận Tiền / Rút Tiền</label>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="box-img">
+                                <img src="Content/images/common/dich-vu-khach-hang.jpeg" />
+                            </div>
+
+                            <ul class="list-info">
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-map-marker"></i>
+                                        QL14 Ngã 3 Phú Hòa, KP Phú Hòa <br />
+                                        P.Hòa Lợi, H.Bến Cát, T.Bình Dương
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-phone"></i>
+                                        Số điện thoại: 02746.222.999
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-mobile"></i>
+                                        Hotline: 0977.87.78.77
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-user-circle"></i>
+                                        Tư vấn viên: Lê Văn Trường
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-globe"></i>
+                                        Website: <a href="http://hoadonbanhang.com">http://hoadonbanhang.com</a>
+                                    </p>
+                                </li>
+                            </ul>
+
+                            <div class="btn-logout">
+                                <a href="#">Thoát Tài Khoản</a>
+                            </div>
+
+                            <ul class="list-option-bot">
+                                <li class="list-option-bot-item">
+                                    <a href="#">Về trang chủ</a>
+                                </li>
+                                <li class="list-option-bot-item">
+                                    |
+                                </li>
+                                <li class="list-option-bot-item">
+                                    <a href="#">Đổi mật khẩu</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="box-menu-navigation">
+                    <input id="input-toogle-menu" hidden type="checkbox" name="name" value="" />
+
+                    <label for="input-toogle-menu" class="mask">
+
+                    </label>
+
+                    <div class="menu-left" id="menu-navigation">
+                        <div class="menu-left-item">
+                            <label for="input-toogle-menu" class="btn-close-menu">
+                                <span>
+                                    ✕
+                                </span>
+                            </label>
+
+                            <h2 class="title">
+                                CÔNG TY TNHH DV VT TRƯỜNG THỌ BƯU ĐIỆN - VIETTEL TRƯỜNG THỌ
+                            </h2>
+
+                            <ul class="list-select">
+                                <li class="list-select-item">
+                                    <a href="#">
+                                        <i class="fa fa-hand-o-right"></i>
+                                        Hóa Đơn Bán Hàng
+                                    </a>
+                                </li>
+                                <li class="list-select-item">
+                                    <a href="#">
+                                        <i class="fa fa-hand-o-right"></i>
+                                        Hóa Đơn Thu Hộ
+                                    </a>
+                                </li>
+                                <li class="list-select-item">
+                                    <a href="#">
+                                        <i class="fa fa-hand-o-right"></i>
+                                        Hóa Đơn Nhận Tiền
+                                    </a>
+                                </li>
+                                <li class="list-select-item">
+                                    <a href="#">
+                                        <i class="fa fa-hand-o-right"></i>
+                                        Hóa Đơn Gửi Tiền
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!--<ul class="list-info">
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-map-marker"></i>
+                                        QL14 Ngã 3 Phú Hòa, KP Phú Hòa <br />
+                                        P.Hòa Lợi, H.Bến Cát, T.Bình Dương
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-phone"></i>
+                                        Số điện thoại: 02746.222.999
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-mobile"></i>
+                                        Hotline: 0977.87.78.77
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-user-circle"></i>
+                                        Tư vấn viên: Lê Văn Trường
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-globe"></i>
+                                        Website: <a href="http://hoadonbanhang.com">http://hoadonbanhang.com</a>
+                                    </p>
+                                </li>
+                            </ul>-->
+
+                            <div class="btn-logout">
+                                <a href="#">Thoát Tài Khoản</a>
+                            </div>
+
+                            <ul class="list-option-bot">
+                                <li class="list-option-bot-item">
+                                    <a href="#">Về trang chủ</a>
+                                </li>
+                                <li class="list-option-bot-item">
+                                    |
+                                </li>
+                                <li class="list-option-bot-item">
+                                    <a href="#">Đổi mật khẩu</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col l-8 m-12 c-12">
+                    <div class="content-main">
+                        <div class="content-main-item">
+                            <div class="row">
+                                <div class="col l-12 m-12 c-12">
+                                    <div class="section-header">
+                                        <label for="input-toogle-menu" class="btn-toogle-menu">
+                                            <i class="fa fa-navicon"></i>
+                                        </label>
+                                        <div class="box-title">
+                                            <h2>
+                                                Hóa đơn chuyển tiền / nộp tiền
+                                            </h2>
+                                        </div>
+                                        <div class="add-btn">
+                                            <i class="fa fa-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col l-6 m-6 c-12">
+                                    <div class="content-item">
+                                        <div class="content-item-title">
+                                            <a href="#">
+                                                Thông tin khách gửi
+                                            </a>
+                                        </div>
+
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-phone"></i>
+                                                </div>
+                                                <input class="input-text" placeholder="Nhập số điện thoại " type="text" name="name" value="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-user-o"></i>
+                                                </div>
+                                                <input class="input-text" placeholder="Họ và tên " type="text" name="name" value="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-id-card-o"></i>
+                                                </div>
+                                                <input class="input-text" placeholder="Số CMND / Hộ chiếu " type="text" name="name" value="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-map-marker"></i>
+                                                </div>
+                                                <textarea class="input-area" placeholder="Địa chỉ liên hệ" rows="2"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-6 m-6 c-12">
+                                    <div class="content-item">
+                                        <div class="content-item-title">
+                                            <a href="#">
+                                                Thông tin khách nhận
+                                            </a>
+                                        </div>
+
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-phone"></i>
+                                                </div>
+                                                <input class="input-text" placeholder="Nhập số điện thoại " type="text" name="name" value="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-user-o"></i>
+                                                </div>
+                                                <input class="input-text" placeholder="Họ và tên " type="text" name="name" value="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-id-card-o"></i>
+                                                </div>
+                                                <input class="input-text" placeholder="Số CMND / Hộ chiếu " type="text" name="name" value="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-map-marker"></i>
+                                                </div>
+                                                <textarea class="input-area" placeholder="Địa chỉ liên hệ" rows="2"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col l-12 m-12 c-12">
+                                    <div class="content-item">
+                                        <div class="content-item-title">
+                                            <a href="#">
+                                                Thông tin gửi tiền
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col l-6 m-6 c-12">
+                                    <div class="content-item">
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-credit-card-alt"></i>
+                                                </div>
+                                                <input class="input-text" placeholder="Số tài khoản / Số thẻ " type="text" name="name" value="" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col l-6 m-6 c-12">
+                                                <div class="content-item">
+                                                    <div class="content-item-box-input">
+                                                        <div class="input-group">
+                                                            <div class="input-lbl">
+                                                                <i class="fa fa-money"></i>
+                                                            </div>
+                                                            <input class="input-text" placeholder="Số tiền muốn chuyển " type="text" name="name" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-12">
+                                                <div class="content-item">
+                                                    <div class="content-item-box-input">
+                                                        <div class="input-group">
+                                                            <div class="input-lbl">
+                                                                <i class="fa fa-plus"></i>
+                                                            </div>
+                                                            <input class="input-text" placeholder="Lệ phí " type="text" name="name" value="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-6 m-6 c-12">
+                                    <div class="content-item">
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-home"></i>
+                                                </div>
+                                                <input class="input-text" placeholder="Ngân hàng " type="text" name="name" value="" />
+                                            </div>
+                                        </div>
+                                        <div class="content-item-box-input">
+                                            <div class="input-group">
+                                                <div class="input-lbl">
+                                                    <i class="fa fa-pause"></i>
+                                                </div>
+                                                <input class="input-text" placeholder="Số tiền thanh toán " type="text" name="name" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col l-6 m-6 c-12">
+                                    <div class="content-item">
+                                        <div class="content-item-title">
+                                            <a href="#">
+                                                Hình thức nhận tiền
+                                            </a>
+                                        </div>
+
+                                        <div class="content-item-select">
+                                            <ul class="list-select">
+                                                <li class="list-select-item">
+                                                    <input id="input-office" checked="checked" hidden type="radio" name="input1" value="" />
+                                                    <label class="lbl-office" for="input-office">Tại quầy</label>
+                                                </li>
+                                                <li class="list-select-item">
+                                                    <input id="input-bank" hidden type="radio" name="input1" value="" />
+                                                    <label class="lbl-bank" for="input-bank">Chuyển khoản</label>
+                                                </li>
+                                                <li class="list-select-item">
+                                                    <input id="input-home" hidden type="radio" name="input1" value="" />
+                                                    <label class="lbl-home" for="input-home">Tại nhà</label>
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-6 m-6 c-12">
+                                    <div class="content-item">
+                                        <div class="content-item-title">
+                                            <a href="#">
+                                                Trạng thái xử lý
+                                            </a>
+                                        </div>
+                                        <div class="content-item-select">
+                                            <ul class="list-select">
+                                                <li class="list-select-item">
+                                                    <input id="input-yes" checked="checked" hidden type="radio" name="status" value="" />
+                                                    <label class="lbl-yes" for="input-yes">Đã xử lý</label>
+                                                </li>
+                                                <li class="list-select-item">
+                                                    <input id="input-no" hidden type="radio" name="status" value="" />
+                                                    <label class="lbl-no" for="input-no">Chưa xử lý</label>
+                                                </li>
+                                            </ul>
+                                            <div class="btn-print">
+                                                <div class="btn-print-content">
+                                                    <i class="fa fa-print"></i>&nbspIn
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col l-12 m-12 c-12">
+                                    <div class="table-view">
+                                        <div class="table-view-content">
+                                            <div class="box-search">
+                                                <div class="box-search-item">
+                                                    <input type="text" placeholder="Nhập số điện thoại khách để tìm kiếm " name="name" value="" />
+                                                    <ul class="box-btn-search">
+                                                        <li class="box-btn-search-item">
+                                                            <a href="#">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="box-btn-search-item">
+                                                            <a href="#">
+                                                                <i class="fa fa-search"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <ul class="list-user">
+                                                <li class="list-user-item">
+                                                    <ul class="content-list">
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                STT
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Thông tin khách gửi
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Thông tin khách nhận
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Số tài khoản<br />
+                                                                Tên ngân hàng
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Số tiền chuyển <br />
+                                                                Lệ phí
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Tổng tiền <br />
+                                                                Ngày chuyển
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Đã xử lý
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Tác vụ
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-user-item">
+                                                    <ul class="content-list">
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                01
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Trần Phúc Thoại <br />
+                                                                0961237654
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Trần Phúc Thoại <br />
+                                                                0961237654
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                BIDV Bình Dương <br />
+                                                                0-9876-5434-5678
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                120,000
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                120,000 <br />
+                                                                16/11/2018
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                <input type="checkbox" name="name" value="" />
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <ul class="list-btn-edit">
+                                                                <li class="list-btn-edit-item">
+                                                                    <a href="#">
+                                                                        <i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="list-btn-edit-item">
+                                                                    <a href="#">
+                                                                        <i class="fa fa-trash"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-user-item">
+                                                    <ul class="content-list">
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                02
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Trần Phúc Thoại <br />
+                                                                0961237654
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Trần Phúc Thoại <br />
+                                                                0961237654
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                BIDV Bình Dương <br />
+                                                                0-9876-5434-5678
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                120,000
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                120,000 <br />
+                                                                16/11/2018
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                <input checked="checked" type="checkbox" name="name" value="" />
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <ul class="list-btn-edit">
+                                                                <li class="list-btn-edit-item">
+                                                                    <a href="#">
+                                                                        <i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="list-btn-edit-item">
+                                                                    <a href="#">
+                                                                        <i class="fa fa-trash"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-user-item">
+                                                    <ul class="content-list">
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                03
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Trần Phúc Thoại <br />
+                                                                0961237654
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Trần Phúc Thoại <br />
+                                                                0961237654
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                BIDV Bình Dương <br />
+                                                                0-9876-5434-5678
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                120,000
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                120,000 <br />
+                                                                16/11/2018
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                <input type="checkbox" name="name" value="" />
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <ul class="list-btn-edit">
+                                                                <li class="list-btn-edit-item">
+                                                                    <a href="#">
+                                                                        <i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="list-btn-edit-item">
+                                                                    <a href="#">
+                                                                        <i class="fa fa-trash"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-user-item">
+                                                    <ul class="content-list">
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                04
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Trần Phúc Thoại <br />
+                                                                0961237654
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                Trần Phúc Thoại <br />
+                                                                0961237654
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                BIDV Bình Dương <br />
+                                                                0-9876-5434-5678
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                120,000
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                120,000 <br />
+                                                                16/11/2018
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <p class="content-item__txt">
+                                                                <input checked="checked" type="checkbox" name="name" value="" />
+                                                            </p>
+                                                        </li>
+                                                        <li class="content-item">
+                                                            <ul class="list-btn-edit">
+                                                                <li class="list-btn-edit-item">
+                                                                    <a href="#">
+                                                                        <i class="fa fa-eye"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="list-btn-edit-item">
+                                                                    <a href="#">
+                                                                        <i class="fa fa-trash"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,614 @@
+﻿@import "variable.scss";
+
+/*#region main */
+.main {
+    position: relative;
+
+    .menu-left {
+        min-height: 100vh;
+
+
+        &-item {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+
+            .title {
+            }
+
+            .box-dropdown {
+                background-color: $colorGreen2x;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 25px 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 20px 0;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: $colorWhite transparent transparent transparent;
+                    transform: translateY(-40%);
+                }
+
+                .lbl-dropdown {
+                    color: $colorWhite;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+
+                #input-dropdown {
+
+                    &:checked ~ .list-dropdown {
+                        display: block;
+                    }
+                }
+
+
+                .list-dropdown {
+                    width: 250px;
+                    position: absolute;
+                    bottom: -215px;
+                    left: 0;
+                    z-index: 2;
+                    border: 1px solid rgba($colorBlack,0.2);
+                    display: none;
+                    border-radius: 5px;
+                    background-color: $colorWhite;
+
+                    &-item {
+                        width: 100%;
+                        padding: 15px 0 15px 10px;
+                        border-bottom: 1px solid rgba($colorBlack,0.2);
+
+                        &__link {
+                            color: $colorTextMain;
+                        }
+                    }
+
+                    &-item:last-child {
+                        width: 100%;
+                        padding: 15px 0 15px 10px;
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            .box-img {
+                text-align: center;
+                width: 60%;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .list-info {
+                padding-top: 15px;
+                text-align: center;
+
+                &-item {
+                    padding-bottom: 5px;
+
+                    p {
+                        color: $colorTextInfo;
+                        line-height: 1.5rem;
+
+                        i {
+                            font-size: 1.2rem;
+                            padding-right: 5px;
+                        }
+
+                        a {
+                            color: $colorTextBlue;
+                        }
+                    }
+                }
+            }
+
+            .btn-logout {
+                margin: 15px 0;
+                background-color: $colorbgRed;
+                border-radius: 5px;
+
+                a {
+                    display: inline-block;
+                    padding: 7px 15px;
+                    color: $colorWhite;
+                }
+            }
+
+            .list-option-bot {
+                display: flex;
+
+                &-item {
+                    padding: 0 5px;
+
+                    a {
+                        color: $colorTextBlue;
+                    }
+                }
+            }
+        }
+    }
+
+    #menu-navigation {
+        width: 300px;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        z-index: 10;
+        background-color: $colorBgGrey;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition: all .2s ease-in;
+
+
+        .menu-left-item {
+            padding-top: 50px;
+            position: relative;
+
+            .title {
+                text-align: center;
+            }
+
+            .btn-close-menu {
+                cursor: pointer;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+
+                span {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+
+
+
+            .list-select {
+                width: 100%;
+                padding: 10px 0;
+
+                &-item {
+                    width: 100%;
+                    border-bottom: 1px solid rgba($colorBlack, 0.1);
+                    padding: 10px 10px;
+
+                    a {
+                        display: inline-block;
+                        margin-left: 10px;
+                        color: $colorTextBlue;
+                        transition: all .5s;
+
+                        i {
+                        }
+                    }
+
+                    &:hover {
+                        background-color: rgba($colorBlack, 0.07);
+
+                        a {
+                            margin-left: 17px;
+
+                            i {
+                            }
+                        }
+                    }
+                }
+
+                &-item:first-child {
+                    border-top: 1px solid rgba($colorBlack, 0.1);
+                    padding: 10px 10px;
+                }
+            }
+
+            .list-info {
+                text-align: left;
+            }
+        }
+    }
+
+    #input-toogle-menu:checked ~ #menu-navigation {
+        left: 0px;
+    }
+
+    .mask {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+        z-index: 9;
+        background-color: rgba($colorBlack, .5);
+        opacity: 0;
+    }
+
+    #input-toogle-menu:checked ~ .mask {
+        left: 0;
+        opacity: 1;
+    }
+
+    .content-main {
+        &-item {
+            background-color: $colorbgBlue;
+            padding: 30px 20px;
+
+            .btn-toogle-menu {
+                height: 35px;
+                width: 35px;
+                border: 2px solid $colorWhite;
+                border-radius: 5px;
+                transition: all .5s;
+                display: none;
+                cursor: pointer;
+
+                i {
+                    color: $colorWhite;
+                    font-size: 1.4rem;
+                    transition: all .5s;
+                }
+
+                &:hover {
+                    border: 2px solid $colorYellow;
+
+                    i {
+                        color: $colorYellow;
+                    }
+                }
+            }
+
+            @media (max-width: 1113.99px) {
+                .btn-toogle-menu {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .section-header {
+                color: $colorWhite;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0px;
+
+                .box-title {
+                    h2 {
+                        font-size: 1.7rem;
+                        font-weight: 500;
+                    }
+                }
+
+                .add-btn {
+                    height: 30px;
+                    width: 30px;
+                    background-color: $colorYellow;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    i {
+                        padding: 3px;
+                    }
+                }
+            }
+
+            .content-item {
+                &-title {
+                    margin-bottom: 20px;
+
+                    a {
+                        position: relative;
+                        font-size: 1.2rem;
+                        color: $colorWhite;
+                        overflow: hidden;
+                        padding-bottom: 7px;
+
+                        &::after {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            content: "";
+                            height: 2px;
+                            width: 100%;
+                            background-color: $colorWhite;
+                        }
+                    }
+                }
+
+                &-box-input {
+                    .input-group {
+                        width: 100%;
+                        display: flex;
+                        position: relative;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        margin-bottom: 20px;
+
+                        .input-text {
+                            padding: 12px 20px 12px 50px;
+                            font-size: 16px;
+                            flex-grow: 1;
+
+                            &:focus {
+                                background-color: $colorYellow;
+                                color: $colorTextMain;
+                            }
+                        }
+
+                        .input-area {
+                            padding: 12px 20px 12px 50px;
+                            font-size: 16px;
+                            flex-grow: 1;
+
+                            &:focus {
+                                background-color: $colorYellow;
+                                color: $colorTextMain;
+                            }
+                        }
+
+                        .input-lbl {
+                            width: 40px;
+                            height: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                            background-color: $colorBgGrey;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            //padding: 13px 9px;
+                            i {
+                                color: $colorGreen2x;
+                            }
+                        }
+                    }
+                }
+
+                &-select {
+                    display: flex;
+
+                    .list-select {
+                        display: inline-flex;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        margin-bottom: 20px;
+                        flex-wrap: wrap;
+
+                        &-item {
+                            background-color: $colorWhite;
+
+                            label {
+                                display: inline-block;
+                                padding: 5px 10px;
+                                font-weight: 500;
+                                color: $colorTextSelect;
+                                transition: all .3s;
+                                cursor: pointer;
+                            }
+
+                            #input-office:checked ~ .lbl-office {
+                                background-color: $colorGreen2x;
+                                color: $colorWhite;
+                            }
+
+                            #input-bank:checked ~ .lbl-bank {
+                                background-color: $colorGreen2x;
+                                color: $colorWhite;
+                            }
+
+                            #input-home:checked ~ .lbl-home {
+                                background-color: $colorGreen2x;
+                                color: $colorWhite;
+                            }
+
+                            #input-no:checked ~ .lbl-no {
+                                background-color: $colorGreen2x;
+                                color: $colorWhite;
+                            }
+
+                            #input-yes:checked ~ .lbl-yes {
+                                background-color: $colorGreen2x;
+                                color: $colorWhite;
+                            }
+                        }
+                    }
+
+
+
+                    .btn-print {
+                        align-content: flex-start;
+                        padding-left: 30px;
+
+                        &-content {
+                            color: $colorbgBlue;
+                            padding: 5px 10px;
+                            background-color: $colorYellow;
+                            border-radius: 5px;
+
+                            i {
+                            }
+                        }
+                    }
+                }
+            }
+
+            .table-view {
+                &-content {
+                    background-color: $colorWhite;
+                    border-radius: 4px;
+                    overflow-y: hidden;
+
+                    .box-search {
+                        width: 100%;
+
+                        &-item {
+                            position: relative;
+                            padding: 5px;
+                            width: 100%;
+
+                            input {
+                                padding: 12px 20px 12px 20px;
+                                font-size: 16px;
+                                width: 100%;
+                                border-radius: 4px;
+                                overflow: hidden;
+                                border: 2px solid $colorbgBlue;
+
+
+                                &:focus {
+                                    background-color: $colorYellow;
+                                }
+                            }
+
+                            .box-btn-search {
+                                position: absolute;
+                                top: 50%;
+                                right: 7px;
+                                display: flex;
+                                transform: translateY(-50%);
+                                overflow: hidden;
+
+                                &-item {
+                                    padding: 10px;
+
+                                    a {
+                                        i {
+                                            color: $colorGreen2x;
+                                        }
+                                    }
+                                }
+
+                                &-item:first-child {
+                                    background-color: $colorBgGrey;
+                                }
+
+                                &-item:last-child {
+                                    background-color: $colorYellow;
+                                }
+                            }
+                        }
+                    }
+
+                    .list-user {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        min-width: 700px;
+                        overflow-x: scroll;
+
+
+                        &-item {
+                            width: 100%;
+                            margin: 5px 0;
+                            border-bottom: 1px solid rgba($colorBgGrey,.8);
+
+                            .content-list {
+                                padding: 0 10px;
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+
+                                .content-item {
+                                    padding: 8px 5px;
+                                    width: 100%;
+
+                                    &__txt {
+                                        color: $colorBlack;
+                                    }
+
+                                    .list-btn-edit {
+                                        display: flex;
+
+                                        &-item {
+                                            margin: 0 2px;
+                                            display: inline-flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            width: 30px;
+                                            height: 30px;
+                                            border-radius: 3px;
+
+
+                                            a {
+
+
+
+                                                i {
+                                                    color: $colorWhite;
+                                                }
+                                            }
+                                        }
+
+                                        &-item:first-child {
+                                            background-color: $colorGreen2x;
+
+                                            a {
+                                            }
+                                        }
+
+                                        &-item:last-child {
+                                            background-color: $colorbgRed;
+
+                                            a {
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .content-item:nth-child(1) {
+                                    width: 20%;
+                                }
+
+                                .content-item:nth-child(7) {
+                                    width: 40%;
+                                }
+
+                                .content-item:nth-child(8) {
+                                    width: 40%;
+                                }
+                            }
+
+                            .content-list {
+
+                                .content-item {
+                                    &__txt {
+                                    }
+                                }
+                            }
+                        }
+
+                        &-item:first-child {
+                            .content-list {
+                                background-color: $colorYellow;
+
+                                .content-item {
+                                    &__txt {
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*#endregion */
