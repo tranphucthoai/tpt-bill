@@ -43,7 +43,7 @@
 .main .content-main-item .btn-toogle-menu:hover { border: 2px solid #fffa00; }
 .main .content-main-item .btn-toogle-menu:hover i { color: #fffa00; }
 @media (max-width: 1113.99px) { .main .content-main-item .btn-toogle-menu { display: flex; align-items: center; justify-content: center; } }
-.main .content-main-item .section-header { color: #ffffff; display: flex; justify-content: space-between; align-items: center; padding: 10px 0px; }
+.main .content-main-item .section-header { color: #ffffff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 10px 0px; }
 .main .content-main-item .section-header .box-title h2 { font-size: 1.7rem; font-weight: 500; }
 .main .content-main-item .section-header .add-btn { height: 30px; width: 30px; background-color: #fffa00; display: flex; align-items: center; justify-content: center; border-radius: 5px; cursor: pointer; }
 .main .content-main-item .section-header .add-btn i { padding: 3px; }
