@@ -1,0 +1,8 @@
+.content-main-item { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.content-main-item .content-item-form-login { width: 350px; }
+.content-main-item .content-item-form-login .title { font-size: 30px; color: #ffffff; text-align: center; margin-bottom: 25px; }
+.content-main-item .content-item-form-login .content-item-box-input .input-group select.input-text { cursor: pointer; }
+.content-main-item .content-item-form-login .btn-login { background-color: #dc3545; color: #ffffff; font-weight: bold; width: 100%; padding: 10px; border-radius: 5px; cursor: pointer; transition: all .5s; }
+.content-main-item .content-item-form-login .btn-login:hover { box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=login.css.map */

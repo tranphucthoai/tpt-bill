@@ -153,7 +153,6 @@
         overflow-y: auto;
         transition: all .2s ease-in;
 
-
         .menu-left-item {
             padding-top: 50px;
             position: relative;
@@ -173,8 +172,6 @@
                     font-weight: bold;
                 }
             }
-
-
 
             .list-select {
                 width: 100%;
@@ -217,6 +214,10 @@
                 text-align: left;
             }
         }
+
+        @media (min-width: 1114px) {
+            left: -300px !important;
+        }
     }
 
     #input-toogle-menu:checked ~ #menu-navigation {
@@ -233,6 +234,10 @@
         z-index: 9;
         background-color: rgba($colorBlack, .5);
         opacity: 0;
+
+        @media (min-width: 1114px) {
+            opacity: 0 !important;
+        }
     }
 
     #input-toogle-menu:checked ~ .mask {
@@ -241,6 +246,7 @@
     }
 
     .content-main {
+
         &-item {
             background-color: $colorbgBlue;
             padding: 30px 20px;
@@ -287,8 +293,8 @@
 
                 .box-title {
                     h2 {
-                        font-size: 1.7rem;
-                        font-weight: 500;
+                        font-size: 1.9rem;
+                        font-weight: 600;
                     }
                 }
 
@@ -309,12 +315,14 @@
             }
 
             .content-item {
+
                 &-title {
                     margin-bottom: 20px;
 
                     a {
                         position: relative;
-                        font-size: 1.2rem;
+                        font-size: 1rem;
+                        font-weight: 600;
                         color: $colorWhite;
                         overflow: hidden;
                         padding-bottom: 7px;
@@ -332,53 +340,6 @@
                 }
 
                 &-box-input {
-                    .input-group {
-                        width: 100%;
-                        display: flex;
-                        position: relative;
-                        border-radius: 4px;
-                        overflow: hidden;
-                        margin-bottom: 20px;
-
-                        .input-text {
-                            padding: 12px 20px 12px 50px;
-                            font-size: 16px;
-                            flex-grow: 1;
-
-                            &:focus {
-                                background-color: $colorYellow;
-                                color: $colorTextMain;
-                            }
-                        }
-
-                        .input-area {
-                            padding: 12px 20px 12px 50px;
-                            font-size: 16px;
-                            flex-grow: 1;
-
-                            &:focus {
-                                background-color: $colorYellow;
-                                color: $colorTextMain;
-                            }
-                        }
-
-                        .input-lbl {
-                            width: 40px;
-                            height: 100%;
-                            position: absolute;
-                            top: 50%;
-                            left: 0;
-                            transform: translateY(-50%);
-                            background-color: $colorBgGrey;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            //padding: 13px 9px;
-                            i {
-                                color: $colorGreen2x;
-                            }
-                        }
-                    }
                 }
 
                 &-select {
@@ -450,161 +411,146 @@
             }
 
             .table-view {
-                &-content {
-                    background-color: $colorWhite;
-                    border-radius: 4px;
-                    overflow-y: hidden;
+                background-color: $colorWhite;
+                border-radius: 5px;
+
+                @media (max-width: 700px) {
+                    overflow-x: scroll;
+
+                    table {
+                        width: 700px !important;
+                    }
 
                     .box-search {
+                        width: 700px !important;
+                    }
+                }
+
+
+                .box-search {
+                    width: 100%;
+
+                    &-item {
+                        position: relative;
+                        padding: 5px;
                         width: 100%;
 
-                        &-item {
-                            position: relative;
-                            padding: 5px;
+                        input {
+                            padding: 12px 20px 12px 20px;
+                            font-size: 16px;
                             width: 100%;
-
-                            input {
-                                padding: 12px 20px 12px 20px;
-                                font-size: 16px;
-                                width: 100%;
-                                border-radius: 4px;
-                                overflow: hidden;
-                                border: 2px solid $colorbgBlue;
+                            border-radius: 4px;
+                            overflow: hidden;
+                            border: 2px solid $colorbgBlue;
 
 
-                                &:focus {
-                                    background-color: $colorYellow;
+                            &:focus {
+                                background-color: $colorYellow;
+                            }
+                        }
+
+                        .box-btn-search {
+                            position: absolute;
+                            top: 50%;
+                            right: 7px;
+                            display: flex;
+                            transform: translateY(-50%);
+                            overflow: hidden;
+
+                            &-item {
+                                padding: 10px;
+
+                                a {
+                                    i {
+                                        color: $colorGreen2x;
+                                    }
                                 }
                             }
 
-                            .box-btn-search {
-                                position: absolute;
-                                top: 50%;
-                                right: 7px;
-                                display: flex;
-                                transform: translateY(-50%);
-                                overflow: hidden;
+                            &-item:first-child {
+                                background-color: $colorBgGrey;
+                            }
 
-                                &-item {
-                                    padding: 10px;
-
-                                    a {
-                                        i {
-                                            color: $colorGreen2x;
-                                        }
-                                    }
-                                }
-
-                                &-item:first-child {
-                                    background-color: $colorBgGrey;
-                                }
-
-                                &-item:last-child {
-                                    background-color: $colorYellow;
-                                }
+                            &-item:last-child {
+                                background-color: $colorYellow;
                             }
                         }
                     }
+                }
 
-                    .list-user {
-                        display: flex;
-                        flex-direction: column;
-                        width: 100%;
-                        min-width: 700px;
-                        overflow-x: scroll;
+                table {
+                    width: 100%;
+                    text-align: center;
+                    border: none;
+                    border-collapse: collapse;
 
+                    tbody {
+                        tr {
+                            transition: all .3s;
 
-                        &-item {
-                            width: 100%;
-                            margin: 5px 0;
-                            border-bottom: 1px solid rgba($colorBgGrey,.8);
+                            td {
+                                border-left: none;
+                                border-right: none;
+                                padding: 5px 0;
+                                border-top: 1px solid $colorBgGrey;
+                                border-bottom: 1px solid $colorBgGrey;
 
-                            .content-list {
-                                padding: 0 10px;
-                                width: 100%;
-                                display: flex;
-                                justify-content: space-around;
-                                align-items: center;
+                                .list-btn-edit {
+                                    display: flex;
+                                    justify-content: center;
 
-                                .content-item {
-                                    padding: 8px 5px;
-                                    width: 100%;
-
-                                    &__txt {
-                                        color: $colorBlack;
-                                    }
-
-                                    .list-btn-edit {
-                                        display: flex;
-
-                                        &-item {
-                                            margin: 0 2px;
-                                            display: inline-flex;
-                                            align-items: center;
-                                            justify-content: center;
-                                            width: 30px;
-                                            height: 30px;
-                                            border-radius: 3px;
+                                    &-item {
+                                        margin: 0 2px;
+                                        display: inline-flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 3px;
 
 
-                                            a {
+                                        a {
 
 
 
-                                                i {
-                                                    color: $colorWhite;
-                                                }
-                                            }
-                                        }
-
-                                        &-item:first-child {
-                                            background-color: $colorGreen2x;
-
-                                            a {
-                                            }
-                                        }
-
-                                        &-item:last-child {
-                                            background-color: $colorbgRed;
-
-                                            a {
+                                            i {
+                                                color: $colorWhite;
                                             }
                                         }
                                     }
-                                }
 
-                                .content-item:nth-child(1) {
-                                    width: 20%;
-                                }
+                                    &-item:first-child {
+                                        background-color: $colorGreen2x;
 
-                                .content-item:nth-child(7) {
-                                    width: 40%;
-                                }
+                                        a {
+                                        }
+                                    }
 
-                                .content-item:nth-child(8) {
-                                    width: 40%;
+                                    &-item:last-child {
+                                        background-color: $colorbgRed;
+
+                                        a {
+                                        }
+                                    }
                                 }
                             }
 
-                            .content-list {
+                            th {
+                                border-left: none;
+                                border-right: none;
+                                border-top: 1px solid $colorBgGrey;
+                                border-bottom: 1px solid $colorBgGrey;
+                                padding: 5px 0;
+                            }
 
-                                .content-item {
-                                    &__txt {
-                                    }
-                                }
+                            &:hover {
+                                background-color: $colorBgGrey;
+                                color: $colorGreen2x;
                             }
                         }
 
-                        &-item:first-child {
-                            .content-list {
-                                background-color: $colorYellow;
-
-                                .content-item {
-                                    &__txt {
-                                        font-weight: 500;
-                                    }
-                                }
-                            }
+                        tr:first-child {
+                            background-color: $colorYellow;
                         }
                     }
                 }
@@ -612,4 +558,111 @@
         }
     }
 }
+/*#endregion */
+/*#region component */
+/*#region message */
+.message-group {
+    margin-bottom: 20px;
+    width: 100%;
+
+    .box-message {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 5px;
+        background-color: $colorWhite;
+        min-height: 40px;
+
+
+        .box-message-txt {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            min-height: 40px;
+            padding: 10px 15px 10px 10px;
+        }
+
+        .box-message-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 12px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+
+    #box-message-input:checked ~ .box-message {
+        display: none;
+    }
+
+    .box-message.box-error {
+        border: 2px solid $colorbgRed;
+
+
+        .box-message-txt {
+            color: $colorbgRed;
+        }
+
+        .box-message-btn {
+            color: $colorbgRed;
+        }
+    }
+
+    .box-message.box-success {
+        border: 2px solid $colorGreen2x;
+
+
+        .box-message-txt {
+            color: $colorGreen2x;
+        }
+
+        .box-message-btn {
+            color: $colorGreen2x;
+        }
+    }
+}
+/*#endregion */
+/*#region input group */
+.input-group {
+    width: 100%;
+    display: flex;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    .input-text, .input-area, .input-select {
+        padding: 12px 20px 12px 50px;
+        font-size: 14px;
+        flex-grow: 1;
+
+        &:focus {
+            background-color: $colorYellow;
+            color: $colorTextMain;
+        }
+    }
+
+    .input-lbl {
+        width: 40px;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: $colorBgGrey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            color: $colorGreen2x;
+        }
+    }
+}
+/*#endregion */
 /*#endregion */

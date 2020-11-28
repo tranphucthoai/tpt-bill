@@ -1,0 +1,50 @@
+﻿@import "variable.scss";
+
+
+.content-main {
+    &-item {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .content-item {
+            &-form-login {
+                width: 350px;
+
+                .title {
+                    font-size: 30px;
+                    color: $colorWhite;
+                    text-align: center;
+                    margin-bottom: 25px;
+                }
+
+                .content-item-box-input {
+                    .input-group {
+                        .input-lbl {
+                        }
+
+                        select.input-text {
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .btn-login {
+                    background-color: $colorbgRed;
+                    color: $colorWhite;
+                    font-weight: bold;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all .5s;
+
+                    &:hover {
+                        box-shadow: 0px 3px 10px rgba($colorBlack,.5);
+                    }
+                }
+            }
+        }
+    }
+}

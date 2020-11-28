@@ -10,7 +10,7 @@
     <link href="Content/css/common.css" rel="stylesheet" />
     <link href="Content/css/grid.css" rel="stylesheet" />
     <link href="Content/css/style.css" rel="stylesheet" />
-    <link href="Content/css/index.css" rel="stylesheet" />
+    <link href="Content/css/login.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -28,22 +28,22 @@
                                 <input type="checkbox" hidden id="input-dropdown" />
                                 <ul class="list-dropdown">
                                     <li class="list-dropdown-item">
-                                        <a class="list-dropdown-item__link" href="#">
+                                        <a class="list-dropdown-item__link" href="HoaDonBanHang.html">
                                             <label for="input-dropdown">Hóa Đơn Bán Hàng</label>
                                         </a>
                                     </li>
                                     <li class="list-dropdown-item">
-                                        <a class="list-dropdown-item__link" href="#">
+                                        <a class="list-dropdown-item__link" href="HoaDonThuHo.html">
                                             <label for="input-dropdown">Hóa Đơn Thu Hộ</label>
                                         </a>
                                     </li>
                                     <li class="list-dropdown-item">
-                                        <a class="list-dropdown-item__link" href="#">
+                                        <a class="list-dropdown-item__link" href="HoaDonChuyenTien.html">
                                             <label for="input-dropdown">Hóa Đơn Chuyển Tiền / Nộp Tiền</label>
                                         </a>
                                     </li>
                                     <li class="list-dropdown-item">
-                                        <a class="list-dropdown-item__link" href="#">
+                                        <a class="list-dropdown-item__link" href="HoaDonNhanTien.html">
                                             <label for="input-dropdown">Hóa Đơn Nhận Tiền / Rút Tiền</label>
                                         </a>
                                     </li>
@@ -122,26 +122,60 @@
 
                             <ul class="list-select">
                                 <li class="list-select-item">
-                                    <a href="HoaDonBanHang.html">
+                                    <a href="#">
                                         <i class="fa fa-hand-o-right"></i> Hóa Đơn Bán Hàng
                                     </a>
                                 </li>
                                 <li class="list-select-item">
-                                    <a href="HoaDonThuHo.html">
+                                    <a href="#">
                                         <i class="fa fa-hand-o-right"></i> Hóa Đơn Thu Hộ
                                     </a>
                                 </li>
                                 <li class="list-select-item">
-                                    <a href="HoaDonNhanTien.html">
+                                    <a href="#">
                                         <i class="fa fa-hand-o-right"></i> Hóa Đơn Nhận Tiền
                                     </a>
                                 </li>
                                 <li class="list-select-item">
-                                    <a href="HoaDonChuyenTien.html">
+                                    <a href="#">
                                         <i class="fa fa-hand-o-right"></i> Hóa Đơn Gửi Tiền
                                     </a>
                                 </li>
                             </ul>
+
+                            <!--<ul class="list-info">
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-map-marker"></i>
+                                        QL14 Ngã 3 Phú Hòa, KP Phú Hòa <br />
+                                        P.Hòa Lợi, H.Bến Cát, T.Bình Dương
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-phone"></i>
+                                        Số điện thoại: 02746.222.999
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-mobile"></i>
+                                        Hotline: 0977.87.78.77
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-user-circle"></i>
+                                        Tư vấn viên: Lê Văn Trường
+                                    </p>
+                                </li>
+                                <li class="list-info-item">
+                                    <p>
+                                        <i class="fa fa-globe"></i>
+                                        Website: <a href="http://hoadonbanhang.com">http://hoadonbanhang.com</a>
+                                    </p>
+                                </li>
+                            </ul>-->
 
                             <div class="btn-logout">
                                 <a href="#">Thoát Tài Khoản</a>
@@ -149,13 +183,13 @@
 
                             <ul class="list-option-bot">
                                 <li class="list-option-bot-item">
-                                    <a href="index.html">Về trang chủ</a>
+                                    <a href="#">Về trang chủ</a>
                                 </li>
                                 <li class="list-option-bot-item">
                                     |
                                 </li>
                                 <li class="list-option-bot-item">
-                                    <a href="DoiMatKhau.html">Đổi mật khẩu</a>
+                                    <a href="#">Đổi mật khẩu</a>
                                 </li>
                             </ul>
                         </div>
@@ -166,55 +200,41 @@
                     <div class="content-main">
                         <div class="content-main-item">
                             <div class="row">
-                                <div class="col l-12 m-12 c-12">
-                                    <div class="section-header">
-                                        <label for="input-toogle-menu" class="btn-toogle-menu">
-                                            <i class="fa fa-navicon"></i>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col l-6 m-6 c-12">
-                                    <div class="box-service">
-                                        <a class="box-service-link" href="HoaDonBanHang.html">
-                                            <h2 class="title">Hóa Đơn Bán Hàng</h2>
-                                            <div class="box-img">
-                                                <img src="Content/images/common/HoaDonBanHang.jpg" />
+                                <div class="col c-12 m-12 l-12">
+                                    <div class="content-item">
+                                        <div class="content-item-form-login">
+                                            <h1 class="title">
+                                                <i class="fa fa-user-circle-o"></i> Đăng nhập
+                                            </h1>
+                                            <div class="content-item-box-input">
+                                                <div class="input-group">
+                                                    <div class="input-lbl">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                    <select class="input-text" placeholder="Chọn tên chi nhánh ">
+                                                    </select>
+                                                </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col l-6 m-6 c-12">
-                                    <div class="box-service">
-                                        <a class="box-service-link" href="HoaDonThuHo.html">
-                                            <h2 class="title">Hóa Đơn Thu Hộ</h2>
-                                            <div class="box-img">
-                                                <img src="Content/images/common/HoaDonThuHo.jpg" />
+                                            <div class="content-item-box-input">
+                                                <div class="input-group">
+                                                    <div class="input-lbl">
+                                                        <i class="fa fa-key"></i>
+                                                    </div>
+                                                    <input class="input-text" placeholder="Mật khẩu " type="password" name="name" value="" />
+                                                </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col l-6 m-6 c-12">
-                                    <div class="box-service">
-                                        <a class="box-service-link" href="HoaDonChuyenTien.html">
-                                            <h2 class="title">Hóa Đơn Chuyển Tiền</h2>
-                                            <div class="box-img">
-                                                <img src="Content/images/common/HoaDonChuyenTien.jpg" />
+                                            <div class="message-group">
+                                                <input id="box-message-input" hidden type="radio" name="name" value="" />
+                                                <div class="box-message box-error">
+                                                    <div class="box-message-txt">
+                                                        JavaScript có thể học nhanh và dễ dàng áp dụng.
+                                                    </div>
+                                                    <label for="box-message-input" class="box-message-btn">✕</label>
+                                                </div>
                                             </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col l-6 m-6 c-12">
-                                    <div class="box-service">
-                                        <a class="box-service-link" href="HoaDonNhanTien.html">
-                                            <h2 class="title">Hóa Đơn Nhận Tiền</h2>
-                                            <div class="box-img">
-                                                <img src="Content/images/common/HoaDonNhanTien.png" />
-                                            </div>
-                                        </a>
+
+                                            <button class="btn-login">Đăng Nhập</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
